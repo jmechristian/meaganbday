@@ -2,8 +2,10 @@ class Person {
   String personName;
   String personPic;
   String personLocation;
+  String personVideo;
 
-  Person({this.personName, this.personPic, this.personLocation});
+  Person(
+      {this.personName, this.personPic, this.personLocation, this.personVideo});
 }
 
 var people = [
@@ -23,4 +25,10 @@ var people = [
       personLocation: 'Nashville, TN',
       personName: 'Banzai',
       personPic: 'assets/banzai.jpeg'),
+  Person(
+    personLocation: 'Burleson, TX',
+    personName: 'Ella and Emery',
+    personPic: 'assets/neices.png',
+    personVideo: 'assets/neices.mp4',
+  ),
 ];

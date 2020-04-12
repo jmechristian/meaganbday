@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 25, left: 15, right: 15),
+            padding: EdgeInsets.only(top: 15, left: 15, right: 15),
             child: Row(
               children: <Widget>[
                 Text(
@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(
-            height: 100,
+            height: 50,
           ),
           Container(
               height: MediaQuery.of(context).size.height - 200,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../widgets/people_row.dart';
 import '../models/person.dart';
 
 class PersonDetail extends StatelessWidget {
@@ -31,21 +32,46 @@ class PersonDetail extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: screenHeight - screenHeight / 3 - 25,
+            top: screenHeight - screenHeight / 3 - 100,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 35, vertical: 30),
-              height: screenHeight / 3 + 25,
+              padding: EdgeInsets.all(25),
+              height: screenHeight / 3 + 100,
               width: screenWidth,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    selectedPerson.personName,
-                    style: GoogleFonts.tinos(fontSize: 36),
-                  ),
-                  Text(
-                    selectedPerson.personLocation,
-                    style: GoogleFonts.sourceSansPro(fontSize: 18),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            selectedPerson.personName,
+                            style: GoogleFonts.tinos(
+                              fontSize: 36,
+                              color: Colors.purple,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            selectedPerson.personLocation,
+                            style: GoogleFonts.sourceSansPro(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      IconButton(
+                        icon: Icon(
+                          Icons.play_circle_filled,
+                        ),
+                        onPressed: () {},
+                        iconSize: 46,
+                        color: Colors.red,
+                      )
+                    ],
                   ),
                   SizedBox(
                     height: 16,
@@ -53,8 +79,15 @@ class PersonDetail extends StatelessWidget {
                   Text(
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada nec massa sit amet facilisis. Vestibulum non consequat est.',
                     style: GoogleFonts.sourceSansPro(
-                        fontSize: 20, color: Colors.black54),
+                        fontSize: 18, color: Colors.black54),
                   ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Divider(
+                    color: Colors.black87,
+                  ),
+                  PeopleRow(),
                 ],
               ),
               decoration: BoxDecoration(
