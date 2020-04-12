@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/people_row.dart';
+import '../widgets/video_player.dart';
 import '../models/person.dart';
 
 class PersonDetail extends StatelessWidget {
@@ -19,16 +20,19 @@ class PersonDetail extends StatelessWidget {
           Container(
             height: screenHeight,
             width: screenWidth,
-            color: Colors.red,
+            color: Colors.transparent,
           ),
           Container(
             height: screenHeight - screenHeight / 3,
             width: screenWidth,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(selectedPerson.personPic),
-                fit: BoxFit.cover,
-              ),
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.purple, Colors.blue]),
+            ),
+            child: VideoPlayerApp(
+              person: selectedPerson,
             ),
           ),
           Positioned(
@@ -54,23 +58,15 @@ class PersonDetail extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            selectedPerson.personLocation,
-                            style: GoogleFonts.sourceSansPro(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
                         ],
                       ),
-                      IconButton(
-                        icon: Icon(
-                          Icons.play_circle_filled,
+                      Text(
+                        selectedPerson.personLocation,
+                        style: GoogleFonts.sourceSansPro(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
-                        onPressed: () {},
-                        iconSize: 46,
-                        color: Colors.red,
-                      )
+                      ),
                     ],
                   ),
                   SizedBox(
