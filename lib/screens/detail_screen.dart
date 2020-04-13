@@ -36,10 +36,10 @@ class PersonDetail extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: screenHeight - screenHeight / 3 - 100,
+            top: screenHeight - screenHeight / 3 - 75,
             child: Container(
               padding: EdgeInsets.all(25),
-              height: screenHeight / 3 + 100,
+              height: screenHeight / 3 + 75,
               width: screenWidth,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class PersonDetail extends StatelessWidget {
                             selectedPerson.personName,
                             style: GoogleFonts.tinos(
                               fontSize: 36,
-                              color: Colors.purple,
+                              color: const Color.fromRGBO(69, 74, 96, 1),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -65,17 +65,24 @@ class PersonDetail extends StatelessWidget {
                         style: GoogleFonts.sourceSansPro(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
+                          color: const Color.fromRGBO(140, 140, 154, 1),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 16,
+                    height: 12,
                   ),
-                  Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada nec massa sit amet facilisis. Vestibulum non consequat est.',
-                    style: GoogleFonts.sourceSansPro(
-                        fontSize: 18, color: Colors.black54),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Text(
+                        selectedPerson.personMessage != null
+                            ? selectedPerson.personMessage
+                            : 'Text will go here',
+                        style: GoogleFonts.sourceSansPro(
+                            fontSize: 16, color: Colors.black54),
+                      ),
+                    ),
                   ),
                   SizedBox(
                     height: 16,

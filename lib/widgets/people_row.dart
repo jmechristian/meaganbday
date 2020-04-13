@@ -18,7 +18,7 @@ class PeopleRow extends StatelessWidget {
         itemBuilder: (_, i) {
           return GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => PersonDetail(
                   selectedPerson: person[i],
                 ),

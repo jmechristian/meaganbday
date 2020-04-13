@@ -35,40 +35,50 @@ class _VideoPlayerAppState extends State<VideoPlayerApp> {
     super.dispose();
   }
 
+  playVideo() {
+    setState(() {
+      if (_controller.value.isPlaying) {
+        _controller.pause();
+      } else {
+        _controller.play();
+      }
+    });
+  }
+
   Widget build(BuildContext context) {
     return Stack(children: <Widget>[
-      Center(
-        child: FutureBuilder(
-          future: _initializeVideoPlayerFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              return AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: VideoPlayer(_controller),
-              );
-            } else {
-              return Center(child: CircularProgressIndicator());
-            }
-          },
-        ),
-      ),
-      Positioned(
-        right: 20,
-        bottom: 110,
-        child: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              if (_controller.value.isPlaying) {
-                _controller.pause();
+      GestureDetector(
+        onTap: () {
+          playVideo();
+        },
+        child: Center(
+          child: FutureBuilder(
+            future: _initializeVideoPlayerFuture,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                return AspectRatio(
+                  aspectRatio: 9 / 16,
+                  child: VideoPlayer(_controller),
+                );
               } else {
-                _controller.play();
+                return Center(child: CircularProgressIndicator());
               }
-            });
-          },
-          child: Icon(
-            _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+            },
           ),
         ),
+      ),
+      Center(
+        child: _controller.value.isPlaying
+            ? Container()
+            : FloatingActionButton(
+                backgroundColor: Colors.red,
+                onPressed: () {
+                  playVideo();
+                },
+                child: Icon(
+                  _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                ),
+              ),
       ),
     ]);
   }

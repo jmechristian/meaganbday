@@ -10,7 +10,7 @@ class PersonGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.only(left: 10, right: 10, bottom: 75),
       itemCount: people.length,
       itemBuilder: (context, i) => GestureDetector(
         onTap: () {
@@ -28,6 +28,14 @@ class PersonGrid extends StatelessWidget {
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 10,
+                      offset: Offset(0, 5),
+                      spreadRadius: 2,
+                    ),
+                  ],
                   color: Colors.red,
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -42,13 +50,16 @@ class PersonGrid extends StatelessWidget {
               ),
               Text(
                 person[i].personName,
-                style: GoogleFonts.tinos(fontSize: 24),
+                style: GoogleFonts.tinos(
+                  fontSize: 24,
+                  color: Colors.white,
+                ),
               ),
               Text(
                 person[i].personLocation,
                 style: GoogleFonts.sourceSansPro(
                   fontSize: 14,
-                  color: Colors.black54,
+                  color: Color.fromRGBO(185, 165, 137, 1),
                 ),
               ),
             ],
@@ -57,8 +68,8 @@ class PersonGrid extends StatelessWidget {
       ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 2 / 2.8,
-        crossAxisSpacing: 10,
+        childAspectRatio: 2 / 3,
+        crossAxisSpacing: 15,
         mainAxisSpacing: 10,
       ),
     );
