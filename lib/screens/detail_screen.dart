@@ -23,7 +23,7 @@ class PersonDetail extends StatelessWidget {
             color: Colors.transparent,
           ),
           Container(
-            height: screenHeight - screenHeight / 3,
+            height: screenHeight - screenHeight / 6 - 10,
             width: screenWidth,
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -36,10 +36,10 @@ class PersonDetail extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: screenHeight - screenHeight / 3 - 75,
+            top: screenHeight - screenHeight / 4 - 20,
             child: Container(
               padding: EdgeInsets.all(25),
-              height: screenHeight / 3 + 75,
+              height: screenHeight / 4 + 25,
               width: screenWidth,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +53,7 @@ class PersonDetail extends StatelessWidget {
                           Text(
                             selectedPerson.personName,
                             style: GoogleFonts.tinos(
-                              fontSize: 36,
+                              fontSize: 32,
                               color: const Color.fromRGBO(69, 74, 96, 1),
                               fontWeight: FontWeight.bold,
                             ),
@@ -70,25 +70,22 @@ class PersonDetail extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Text(
-                        selectedPerson.personMessage != null
-                            ? selectedPerson.personMessage
-                            : 'Text will go here',
-                        style: GoogleFonts.sourceSansPro(
-                            fontSize: 16, color: Colors.black54),
-                      ),
-                    ),
-                  ),
+                  // SizedBox(
+                  //   height: 12,
+                  // ),
+                  // Expanded(
+                  //   child: SingleChildScrollView(
+                  //     child: Text(
+                  //       selectedPerson.personMessage != null
+                  //           ? selectedPerson.personMessage
+                  //           : 'Text will go here',
+                  //       style: GoogleFonts.sourceSansPro(
+                  //           fontSize: 16, color: Colors.black54),
+                  //     ),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 16,
-                  ),
-                  Divider(
-                    color: Colors.black87,
                   ),
                   PeopleRow(),
                 ],

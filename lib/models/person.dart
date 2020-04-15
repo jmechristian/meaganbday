@@ -15,25 +15,25 @@ class Person {
 
 var people = [
   Person(
-      personLocation: 'Centreville, VA',
-      personName: 'Milo',
-      personPic: 'assets/milo.jpeg',
-      personVideo: 'assets/neices.mp4'),
+      personLocation: 'Burleson, TX',
+      personName: 'Grandma!',
+      personPic: 'assets/grandma.JPG',
+      personVideo: 'assets/grandma.mp4'),
   Person(
-      personLocation: 'Dallas, TX',
-      personName: 'Dixie',
-      personPic: 'assets/dixie.jpg',
-      personVideo: 'assets/neices.mp4'),
-  Person(
-      personLocation: 'Alexandria, VA',
-      personName: 'John Prine',
-      personPic: 'assets/prine.JPG',
-      personVideo: 'assets/neices.mp4'),
+      personLocation: 'Burleson, TX',
+      personName: 'Mom',
+      personPic: 'assets/mom.JPG',
+      personVideo: 'assets/mom.mp4'),
   Person(
       personLocation: 'Somewhere in TX',
       personName: 'Katie Conley',
       personPic: 'assets/katie.png',
       personVideo: 'assets/katie.mp4'),
+  Person(
+      personLocation: 'Orlando?',
+      personName: 'Ashley',
+      personPic: 'assets/ashley.png',
+      personVideo: 'assets/ashley.mp4'),
   Person(
     personLocation: 'Burleson, TX',
     personName: 'Ella and Emery',

@@ -59,7 +59,7 @@ class PersonGrid extends StatelessWidget {
                 person[i].personLocation,
                 style: GoogleFonts.sourceSansPro(
                   fontSize: 14,
-                  color: Color.fromRGBO(185, 165, 137, 1),
+                  color: const Color.fromRGBO(204, 173, 125, 1),
                 ),
               ),
             ],

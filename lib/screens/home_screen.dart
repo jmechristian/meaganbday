@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(
                 bottom: 40,
               ),
-              height: MediaQuery.of(context).size.height - 200,
+              height: MediaQuery.of(context).size.height - 220,
               child: PersonGrid(),
             ),
           ],
