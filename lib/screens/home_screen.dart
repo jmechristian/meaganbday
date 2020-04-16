@@ -62,9 +62,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25),
+              padding: EdgeInsets.only(
+                left: 25,
+                top: 15,
+                right: 25,
+              ),
               child: Text(
-                'This will be my message to the person this is for. I am not sure how many lines this goes to and this is just a test.',
+                'You\'ve touched so many people, and even though we can\'t all be together this year, we are always with you.',
                 style: GoogleFonts.sourceSansPro(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,

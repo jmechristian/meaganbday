@@ -36,7 +36,7 @@ class PersonGrid extends StatelessWidget {
                       spreadRadius: 2,
                     ),
                   ],
-                  color: Colors.red,
+                  color: Colors.black38,
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(

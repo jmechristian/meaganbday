@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './screens/home_screen.dart';
+import 'package:meagan_bday/screens/onboarding_screen.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations(
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Meagan Birthday',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: OnboardingScreen(),
     );
   }
 }
