@@ -58,4 +58,19 @@ var people = [
       personName: 'Shari & Buzz',
       personPic: 'assets/buzz.jpg',
       personVideo: 'assets/buzz.mp4'),
+  Person(
+      personLocation: 'Tyson\'s Corners, VA',
+      personName: 'Alex & Austin',
+      personPic: 'assets/milo.jpeg',
+      personVideo: 'assets/aa.mp4'),
+  Person(
+      personLocation: 'Grapevine, TX',
+      personName: 'Justin & Jeaneen',
+      personPic: 'assets/jb.png',
+      personVideo: 'assets/jb.mp4'),
+  Person(
+      personLocation: 'Where ever she wants to be',
+      personName: 'Milo',
+      personPic: 'assets/milo.jpeg',
+      personVideo: 'assets/milo.mp4'),
 ];
