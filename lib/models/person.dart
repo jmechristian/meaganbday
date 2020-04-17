@@ -30,7 +30,7 @@ var people = [
       personPic: 'assets/katie.png',
       personVideo: 'assets/katie.mp4'),
   Person(
-      personLocation: 'Orlando?',
+      personLocation: 'Orlando, FL',
       personName: 'Ashley Maron',
       personPic: 'assets/ashley.JPG',
       personVideo: 'assets/ashley.mp4'),
@@ -44,7 +44,7 @@ var people = [
     personLocation: 'Tokyo, Japan',
     personName: 'Jess Malone',
     personPic: 'assets/jess.JPG',
-    personVideo: 'assets/neices.mp4',
+    personVideo: 'assets/jess.mp4',
     personMessage:
         'Meagan, dagger-mermaid, keeper of cats, lover of bearded indie-men, librarian enchantress, 1st of her name. Your bravery and smarts are something truly rare and I hope to find in myself one day. I couldn’t ask for a better friend and I hope today treats you as well as you deserve. Which is a shit ton.',
   ),
@@ -59,9 +59,14 @@ var people = [
       personPic: 'assets/buzz.jpg',
       personVideo: 'assets/buzz.mp4'),
   Person(
+      personLocation: 'New Braunfels, TX',
+      personName: 'Nana & Pops',
+      personPic: 'assets/nana.png',
+      personVideo: 'assets/nana.mp4'),
+  Person(
       personLocation: 'Tyson\'s Corners, VA',
       personName: 'Alex & Austin',
-      personPic: 'assets/milo.jpeg',
+      personPic: 'assets/aa.jpg',
       personVideo: 'assets/aa.mp4'),
   Person(
       personLocation: 'Grapevine, TX',
